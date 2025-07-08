@@ -102,7 +102,7 @@ export default function Portfolio() {
             <div className="mb-8">
               <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-white shadow-lg">
                 <Image
-                  src="/imagens/lucca.jpg"
+                  src="/PortfolioLucca/imagens/lucca.jpg"
                   alt="Foto de perfil de Lucca Henrique"
                   width={128}
                   height={128}
