@@ -40,7 +40,7 @@ export default function Portfolio() {
       title: "Precision",
       description: "Projeto Acadêmico que consiste na criação de uma Landing Page moderna e responsiva.",
       technologies: ["HTML", "CSS", "React"],
-      imageUrl: "/placeholder.svg?height=200&width=400",
+      imageUrl: "/imagens/Precision.png",
       liveUrl: "https://lukkzhs.github.io/PrecisionV1/",
     },
     {
@@ -48,7 +48,7 @@ export default function Portfolio() {
       description:
         "Aplicativo com o objetivo de auxiliar na alfabetização de crianças. Possui também uma interface Web para cadastro de atividades.",
       technologies: ["React Native", "React", "Java", "MongoDB", "Firebase"],
-      imageUrl: "/placeholder.svg?height=200&width=400",
+      imageUrl: "/imagens/telaQuiz.png",
     },
   ]
 
@@ -100,8 +100,15 @@ export default function Portfolio() {
         <div className="container mx-auto text-center">
           <div className="max-w-4xl mx-auto">
             <div className="mb-8">
-              <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
-                <User className="w-16 h-16 text-white" />
+              <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                <Image
+                  src="/imagens/lucca.jpg"
+                  alt="Foto de perfil de Lucca Henrique"
+                  width={128}
+                  height={128}
+                  className="object-cover w-full h-full"
+                  priority
+                />
               </div>
               <h1 className="text-5xl md:text-7xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent">
