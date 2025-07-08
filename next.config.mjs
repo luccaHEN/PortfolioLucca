@@ -1,17 +1,14 @@
+const isProd = process.env.NODE_ENV === 'production';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  images: {
-    unoptimized: true,
-  },
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
+  images: { unoptimized: true },
   output: 'export',
-  basePath: '/PortfolioLucca',
-  assetPrefix: '/PortfolioLucca',
-}
+  trailingSlash: true,
+  basePath: isProd ? '/PortfolioLucca' : '',
+  assetPrefix: isProd ? '/PortfolioLucca/' : '',
+};
 
-export default nextConfig
+export default nextConfig;
