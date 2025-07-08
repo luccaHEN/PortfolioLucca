@@ -27,12 +27,12 @@ export default function Portfolio() {
   const [selectedCertificate, setSelectedCertificate] = useState<Certificate | null>(null)
 
   const certificates: Certificate[] = [
-    { title: "SQL", year: "2024", pdfUrl: "/certificados/CertificadoSQL.pdf" },
-    { title: "Git & GitHub", year: "2024", pdfUrl: "/certificados/CertificadoGIT.GITHUB.pdf" },
-    { title: "AWS Sales Accreditation", year: "2024", pdfUrl: "/certificados/CertificadoSA.AWS.pdf" },
-    { title: "Serverless Analytics", year: "2024", pdfUrl: "/certificados/Serverless Analytics.pdf" },
-    { title: "AWS Accreditation", year: "2024", pdfUrl: "/certificados/AWS Accreditation.pdf" },
-    { title: "AWS Cloud Economics", year: "2024", pdfUrl: "/certificados/AWSCloudEconomics.pdf" },
+    { title: "SQL", year: "2024", pdfUrl: "/PortfolioLucca/certificados/CertificadoSQL.pdf" },
+    { title: "Git & GitHub", year: "2024", pdfUrl: "/PortfolioLucca/certificados/CertificadoGIT.GITHUB.pdf" },
+    { title: "AWS Sales Accreditation", year: "2024", pdfUrl: "/PortfolioLucca/certificados/CertificadoSA.AWS.pdf" },
+    { title: "Serverless Analytics", year: "2024", pdfUrl: "/PortfolioLucca/certificados/Serverless Analytics.pdf" },
+    { title: "AWS Accreditation", year: "2024", pdfUrl: "/PortfolioLucca/certificados/AWS Accreditation.pdf" },
+    { title: "AWS Cloud Economics", year: "2024", pdfUrl: "/PortfolioLucca/certificados/AWSCloudEconomics.pdf" },
   ]
 
   const projects: Project[] = [
@@ -40,7 +40,7 @@ export default function Portfolio() {
       title: "Precision",
       description: "Projeto Acadêmico que consiste na criação de uma Landing Page moderna e responsiva.",
       technologies: ["HTML", "CSS", "React"],
-      imageUrl: "/imagens/Precision.png",
+      imageUrl: "/PortfolioLucca/imagens/Precision.png",
       liveUrl: "https://lukkzhs.github.io/PrecisionV1/",
     },
     {
@@ -48,7 +48,7 @@ export default function Portfolio() {
       description:
         "Aplicativo com o objetivo de auxiliar na alfabetização de crianças. Possui também uma interface Web para cadastro de atividades.",
       technologies: ["React Native", "React", "Java", "MongoDB", "Firebase"],
-      imageUrl: "/imagens/telaQuiz.png",
+      imageUrl: "/PortfolioLucca/imagens/telaQuiz.png",
     },
   ]
 
