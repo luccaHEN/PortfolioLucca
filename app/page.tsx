@@ -150,7 +150,7 @@ export default function Portfolio() {
             <Card className="p-8 shadow-lg border-0 bg-white/70 backdrop-blur-sm">
               <CardContent className="pt-0">
                 <p className="text-lg text-slate-600 leading-relaxed">
-                  Tenho 22 anos e moro em Uberlândia - MG. Sou apaixonado por desenvolver experiências digitais
+                  Tenho 21 anos e moro em Uberlândia - MG. Sou apaixonado por desenvolver experiências digitais
                   incríveis e estou sempre em busca de novos desafios para aprimorar minhas habilidades. Com foco em
                   tecnologias modernas e melhores práticas de desenvolvimento, busco criar soluções que façam a
                   diferença.
