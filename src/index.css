@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+/* Habilita o dark mode através da classe 'dark' no HTML */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Configuração de temas que antes ficavam no tailwind.config.js */
+@theme {
+  --color-primary: #6366f1;
+  --color-secondary: #020617;
+  --color-accent: #8b5cf6;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "Fira Code", monospace;
+}
+
+@utility glass {
+  @apply bg-white/10 dark:bg-slate-900/40 backdrop-blur-md border border-white/20 dark:border-slate-800/50 shadow-xl;
+}
+  
+@utility text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Estilização da barra de rolagem */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-slate-100 dark:bg-secondary;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 dark:bg-slate-700 rounded-full;
+}
