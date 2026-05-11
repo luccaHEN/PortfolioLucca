@@ -37,13 +37,17 @@ export default function Hero() {
             Ver Projetos <ArrowRight size={18} />
           </a>
           
+          <a href={profileData.resumeUrl} target="_blank" rel="noreferrer" className="flex items-center gap-2 px-8 py-4 rounded-xl glass font-medium hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+            Download CV
+          </a>
+
           <div className="flex gap-4 items-center">
             {[
-              { icon: Github, url: profileData.social.github },
-              { icon: Linkedin, url: profileData.social.linkedin },
-              { icon: Mail, url: `mailto:${profileData.social.email}` },
+              { name: 'GitHub', icon: Github, url: profileData.social.github },
+              { name: 'LinkedIn', icon: Linkedin, url: profileData.social.linkedin },
+              { name: 'E-mail', icon: Mail, url: `mailto:${profileData.social.email}` },
             ].map((social, i) => (
-              <a key={i} href={social.url} target="_blank" rel="noreferrer" className="p-3 rounded-full glass hover:text-primary hover:border-primary/50 transition">
+              <a key={i} href={social.url} target="_blank" rel="noreferrer" aria-label={`Acessar ${social.name}`} className="p-3 rounded-full glass hover:text-primary hover:border-primary/50 transition">
                 <social.icon size={20} />
               </a>
             ))}

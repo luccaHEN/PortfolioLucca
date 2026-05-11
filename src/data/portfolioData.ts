@@ -32,6 +32,7 @@ export const profileData = {
   education: "Tecnólogo em Sistemas para Internet",
   institution: "Instituto Federal do Triângulo Mineiro",
   headline: "Construindo experiências digitais modernas e robustas.",
+  resumeUrl: "./curriculo.pdf",
   social: {
     github: "https://github.com/luccaHEN",
     linkedin: "https://www.linkedin.com/in/lucca-sousa",
@@ -102,6 +103,7 @@ export const skillsData: SkillCategory[] = [
     title: "Frontend",
     skills: [
       "React",
+      "React Native",
       "TypeScript",
       "JavaScript",
       "Tailwind CSS",

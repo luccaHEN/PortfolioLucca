@@ -61,7 +61,7 @@ export default function Projects() {
                 <div className="p-3 bg-primary/10 text-primary rounded-xl"><ExternalLink size={24} /></div>
                 <div className="flex gap-3 text-slate-400">
                   {project.githubUrl && project.githubUrl !== '#' && (
-                    <a href={project.githubUrl} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()} className="hover:text-primary transition relative z-10">
+                    <a href={project.githubUrl} target="_blank" rel="noreferrer" aria-label={`Ver código do projeto ${project.title} no GitHub`} onClick={(e) => e.stopPropagation()} className="hover:text-primary transition relative z-10">
                       <Github size={20} />
                     </a>
                   )}
