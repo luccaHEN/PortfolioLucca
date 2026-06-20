@@ -1,4 +1,4 @@
-export type ProjectType = 'Frontend' | 'Backend' | 'Fullstack';
+export type ProjectType = 'Frontend' | 'Backend' | 'Fullstack' | 'Fullstack & Mobile';
 
 export interface Project {
   id: string;
@@ -44,7 +44,7 @@ export const projectsData: Project[] = [
 {
   "id": "1",
   "title": "Sumasflix",
-  "description": "Plataforma fullstack desenvolvida para streamers organizarem e gerenciarem sessões de filmes com foco em interatividade e engajamento da comunidade. A aplicação integra-se à API do TMDB para busca, avaliação e gerenciamento de títulos, além de oferecer um “Modo Streamer” com agendamento de sessões, registro de indicações do chat e geração de métricas dinâmicas, como rankings dos filmes mais bem avaliados e pódio de resgatadores.",
+  "description": "Ecossistema multiplataforma (Web e Mobile) focado em potencializar o engajamento de streamers com suas comunidades através de sessões interativas de filmes. A solução moderniza a interação ao vivo, conectando a API do TMDB a um 'Modo Streamer' exclusivo, que conta com regras gamificadas, agendamentos automatizados e métricas dinâmicas para a audiência.",
   "type": "Fullstack",
   "techStack": [
     "React",
@@ -52,17 +52,20 @@ export const projectsData: Project[] = [
     "Node.js",
     "Express",
     "Prisma",
-    "PostgreSQL"
+    "PostgreSQL",
+    "Flutter",
+    "Dart"
   ],
   "githubUrl": "#",
   "liveUrl": "https://sumasflix.com.br/",
   "features": [
-    "Integração com API do TMDB para busca de catálogo de filmes",
-    "Dashboard com métricas, gráficos e Pódio de Resgates do chat",
-    "Roleta interativa com animações (canvas-confetti) para sorteios ao vivo",
-    "Listas públicas com URL compartilhável para os espectadores",
-    "Sistema de Drag-and-Drop para reordenar a fila de filmes agendados",
-    "Autenticação e controle de acesso seguros com JWT"
+    "Integração completa de catálogo e metadados via API do TMDB",
+    "Dashboard analítico com gráficos de desempenho e Pódio de Engajamento para a comunidade",
+    "Modo Streamer com Roleta Interativa e animações imersivas para sorteios ao vivo",
+    "App Mobile complementar com calendário de sessões e Notificações Push",
+    "Geração de listas públicas de filmes com URLs compartilháveis para os espectadores",
+    "Interface intuitiva com sistema de Drag-and-Drop para reordenar a fila de agendamentos",
+    "Arquitetura segura com controle de acesso e autenticação baseada em JWT"
   ]
 }
 ,
@@ -103,7 +106,6 @@ export const skillsData: SkillCategory[] = [
     title: "Frontend",
     skills: [
       "React",
-      "React Native",
       "TypeScript",
       "JavaScript",
       "Tailwind CSS",
@@ -114,6 +116,14 @@ export const skillsData: SkillCategory[] = [
     ]
   },
   {
+    title: "Mobile",
+    skills: [
+      "Flutter",
+      "Dart",
+      "React Native"
+    ]
+  },
+  {
     title: "Backend",
     skills: [
       "Java",
@@ -121,21 +131,6 @@ export const skillsData: SkillCategory[] = [
       "Node.js",
       "Express",
       "Python"
-    ]
-  },
-  {
-    title: "Cloud & Data Engineering",
-    skills: [
-      "AWS IAM",
-      "AWS EC2",
-      "AWS VPC",
-      "AWS Lambda",
-      "AWS S3",
-      "AWS Glue",
-      "AWS EMR",
-      "AWS Athena",
-      "Apache Spark",
-      "QuickSight"
     ]
   },
   {
