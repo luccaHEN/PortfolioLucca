@@ -22,7 +22,7 @@ export default function Navbar() {
     <motion.header 
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 w-full z-50 transition-all duration-300 border-b ${isScrolled ? 'bg-white/80 dark:bg-secondary/80 backdrop-blur-md border-slate-200 dark:border-slate-800 py-4 shadow-sm' : 'bg-transparent border-transparent py-6'}`}
+      className={`fixed top-0 w-full z-50 transition-all duration-300 border-b ${isScrolled ? 'bg-white/60 dark:bg-secondary/60 backdrop-blur-xl border-white/20 dark:border-white/10 py-4 shadow-lg shadow-black/5' : 'bg-transparent border-transparent py-6'}`}
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <a href="#" className="text-2xl font-bold tracking-tighter">

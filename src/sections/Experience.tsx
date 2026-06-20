@@ -31,14 +31,17 @@ export default function Experience() {
               transition={{ duration: 0.5, delay: index * 0.2 }}
               className="relative flex items-start gap-6 md:gap-10 group"
             >
-              {/* Ponto / Ícone da Timeline */}
+              {/* Ponto / Ícone da Timeline com Pulso */}
               <div className="relative z-10 flex-shrink-0 flex items-center justify-center w-10 h-10 md:w-14 md:h-14 rounded-full bg-primary text-white ring-4 ring-slate-50 dark:ring-secondary shadow-xl transition-transform duration-300 group-hover:scale-110">
-                {item.type === 'Trabalho' ? <Briefcase size={20} /> : <GraduationCap size={24} />}
+                <div className="absolute inset-0 rounded-full bg-primary animate-ping opacity-20"></div>
+                {item.type === 'Trabalho' ? <Briefcase size={20} className="relative z-10" /> : <GraduationCap size={24} className="relative z-10" />}
               </div>
 
-              {/* Card de Conteúdo Glassmorphism */}
-              <div className="flex-1 glass rounded-2xl p-6 md:p-8 hover:-translate-y-2 transition-transform duration-300">
-                <div className="flex flex-col xl:flex-row xl:justify-between xl:items-start mb-4 gap-4">
+              {/* Card de Conteúdo Glassmorphism com Spotlight Hover */}
+              <div className="flex-1 glass rounded-2xl p-6 md:p-8 hover:-translate-y-2 transition-all duration-300 relative overflow-hidden hover:shadow-xl hover:shadow-primary/10 hover:border-primary/30">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                
+                <div className="flex flex-col xl:flex-row xl:justify-between xl:items-start mb-4 gap-4 relative z-10">
                   <div>
                     <h3 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors duration-300">
                       {item.title}

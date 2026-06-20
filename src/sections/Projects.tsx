@@ -37,15 +37,15 @@ export default function Projects() {
         </div>
       </motion.div>
 
-      <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <AnimatePresence>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <AnimatePresence mode="wait">
           {filteredProjects.map((project) => (
             <motion.div
-              layout
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
               key={project.id}
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.2 }}
               onClick={() => {
                 // Pega a liveUrl se existir, senão usa o githubUrl
                 const targetUrl = (project.liveUrl && project.liveUrl !== '#') ? project.liveUrl : 
@@ -53,11 +53,14 @@ export default function Projects() {
                 
                 if (targetUrl) window.open(targetUrl, '_blank', 'noopener,noreferrer');
               }}
-              className={`glass rounded-2xl p-6 flex flex-col h-full group hover:-translate-y-2 transition-transform duration-300 ${
+              className={`glass rounded-2xl p-6 flex flex-col h-full group relative overflow-hidden hover:-translate-y-2 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 hover:border-primary/30 ${
                 (project.liveUrl && project.liveUrl !== '#') || (project.githubUrl && project.githubUrl !== '#') ? 'cursor-pointer' : ''
               }`}
             >
-              <div className="flex justify-between items-start mb-6">
+              {/* Glow Effect Invisível por Padrão */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/15 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+              
+              <div className="flex justify-between items-start mb-6 relative z-10">
                 <div className="p-3 bg-primary/10 text-primary rounded-xl"><ExternalLink size={24} /></div>
                 <div className="flex gap-3 text-slate-400">
                   {project.githubUrl && project.githubUrl !== '#' && (
@@ -75,7 +78,7 @@ export default function Projects() {
             </motion.div>
           ))}
         </AnimatePresence>
-      </motion.div>
+      </div>
     </section>
   );
 }

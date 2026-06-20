@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { motion } from 'framer-motion'
 import './App.css'
 import Navbar from './components/Navbar'
 import Hero from './sections/Hero'
@@ -17,10 +18,27 @@ function App() {
   }, []);
 
   return (
-    <main className="min-h-screen relative overflow-hidden flex flex-col items-center w-full">
-      {/* Efeito de background gradiente elegante */}
-      <div className="absolute top-0 -z-10 h-full w-full bg-slate-50 dark:bg-secondary">
-        <div className="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-primary/20 opacity-50 blur-[80px]"></div>
+    <main className="min-h-screen relative flex flex-col items-center w-full selection:bg-primary/30">
+      {/* Background animado com "Orbes" flutuantes */}
+      <div className="fixed inset-0 -z-10 bg-slate-50 dark:bg-secondary overflow-hidden pointer-events-none">
+        <motion.div 
+          animate={{ 
+            x: [0, 50, 0, -50, 0],
+            y: [0, 30, 60, 30, 0],
+            scale: [1, 1.1, 1, 0.9, 1]
+          }}
+          transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+          className="absolute top-[10%] left-[15%] h-[400px] w-[400px] md:h-[600px] md:w-[600px] rounded-full bg-primary/20 opacity-60 blur-[100px]"
+        />
+        <motion.div 
+          animate={{ 
+            x: [0, -50, 0, 50, 0],
+            y: [0, -40, -80, -40, 0],
+            scale: [1, 1.2, 1, 1.1, 1]
+          }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+          className="absolute bottom-[10%] right-[10%] h-[300px] w-[300px] md:h-[500px] md:w-[500px] rounded-full bg-orange-500/15 opacity-60 blur-[100px]"
+        />
       </div>
       
       <Navbar />

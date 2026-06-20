@@ -17,7 +17,9 @@ export default function Hero() {
             Olá, meu nome é
           </h2>
           <h1 className="text-5xl md:text-7xl font-bold mb-4 tracking-tight">
-            {profileData.name}.
+            <span className="bg-gradient-to-r from-primary via-orange-500 to-amber-500 bg-clip-text text-transparent drop-shadow-sm">
+              {profileData.name}.
+            </span>
           </h1>
           <h1 className="text-4xl md:text-6xl font-bold text-slate-500 dark:text-slate-400 mb-6">
             {profileData.headline}
