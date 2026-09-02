@@ -8,6 +8,9 @@ export interface Project {
   techStack: string[];
   githubUrl?: string;
   liveUrl?: string;
+  imageUrl?: string;
+  imageUrl2?: string;
+  problemSolved?: string;
   features: string[];
 }
 
@@ -44,7 +47,7 @@ export const projectsData: Project[] = [
 {
   "id": "1",
   "title": "Sumasflix",
-  "description": "Ecossistema multiplataforma (Web e Mobile) focado em potencializar o engajamento de streamers com suas comunidades através de sessões interativas de filmes. A solução moderniza a interação ao vivo, conectando a API do TMDB a um 'Modo Streamer' exclusivo, que conta com regras gamificadas, agendamentos automatizados e métricas dinâmicas para a audiência.",
+  "description": "Ecossistema multiplataforma (Web e Mobile) focado em potencializar o engajamento de streamers com suas comunidades através de sessões interativas de filmes. A solução moderniza a interação ao vivo, conectando a API do TMDB a um 'Modo Streamer' exclusivo, que conta com regras gamificadas, agendamentos e métricas dinâmicas para a audiência.",
   "type": "Fullstack",
   "techStack": [
     "React",
@@ -58,6 +61,9 @@ export const projectsData: Project[] = [
   ],
   "githubUrl": "#",
   "liveUrl": "https://sumasflix.com.br/",
+  "imageUrl": "./sumasflix.png",
+  "imageUrl2": "./sumasflix2.png",
+  "problemSolved": "O streamer que eu assistia usava uma planilha completamente manual e frequentemente se perdia na fila do que precisava assistir. Criei essa plataforma para automatizar a gestão e gamificar a experiência da audiência.",
   "features": [
     "Integração completa de catálogo e metadados via API do TMDB",
     "Dashboard analítico com gráficos de desempenho e Pódio de Engajamento para a comunidade",
@@ -77,7 +83,38 @@ export const projectsData: Project[] = [
     techStack: ["React", "JavaScript"],
     liveUrl: "https://lukkzhs.github.io/PrecisionV1/",
     githubUrl: "#",
+    imageUrl: "./precision.png",
+    problemSolved: "O cliente precisava de uma presença digital moderna para promover um produto agro e captar novos leads de forma eficiente.",
     features: ["Modo Escuro", "Gráficos Interativos", "Gerenciamento de Estado Otimizado"]
+  },
+  {
+    id: "3",
+    title: "Foodie",
+    description: "Aplicativo completo de delivery de comida (estilo iFood / Uber Eats) com arquitetura Fullstack e comunicação em tempo real. Possui dois backends independentes e intercambiáveis (Node.js e Java/Spring Boot) consumindo a mesma base de dados PostgreSQL e o mesmo frontend React. O ecossistema é dividido em 3 módulos (Cliente, Restaurante e Entregador), garantindo uma experiência completa ponta-a-ponta.",
+    type: "Fullstack",
+    techStack: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Node.js",
+      "Express",
+      "Prisma",
+      "Java",
+      "Spring Boot",
+      "PostgreSQL",
+      "WebSockets"
+    ],
+    githubUrl: "https://github.com/luccaHEN/Foodie",
+    imageUrl: "./Foodie.jpeg",
+    problemSolved: "Projeto criado exclusivamente para fins de estudos pessoais e experimentação tecnológica, testando a interoperabilidade entre diferentes ecossistemas de backend (Node vs Java).",
+    features: [
+      "Módulo do Cliente com exploração de restaurantes, carrinho de compras e acompanhamento de pedidos em tempo real via WebSockets",
+      "Módulo do Restaurante com gerenciamento de cardápio (CRUD), fila de pedidos estilo Kanban em tempo real e dashboard com métricas de vendas",
+      "Módulo do Entregador com mural de corridas disponíveis, aceite exclusivo e finalização segura via PIN de 4 dígitos",
+      "Dois backends independentes e intercambiáveis: Java (Spring Boot 3.x com Spring Security & STOMP) e Node.js (Express com Prisma & Socket.IO)",
+      "Chat em tempo real entre cliente, restaurante e entregador",
+      "Sistema de avaliação (Reviews) ao finalizar pedidos"
+    ]
   },
   // Adicione novos projetos aqui facilmente!
 ];

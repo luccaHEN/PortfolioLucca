@@ -20,7 +20,7 @@ function App() {
   return (
     <main className="min-h-screen relative flex flex-col items-center w-full selection:bg-primary/30">
       {/* Background animado com "Orbes" flutuantes */}
-      <div className="fixed inset-0 -z-10 bg-slate-50 dark:bg-secondary overflow-hidden pointer-events-none">
+      <div className="fixed inset-0 -z-10 bg-background bg-grid pointer-events-none opacity-40">
         <motion.div 
           animate={{ 
             x: [0, 50, 0, -50, 0],
@@ -30,15 +30,7 @@ function App() {
           transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
           className="absolute top-[10%] left-[15%] h-[400px] w-[400px] md:h-[600px] md:w-[600px] rounded-full bg-primary/20 opacity-60 blur-[100px]"
         />
-        <motion.div 
-          animate={{ 
-            x: [0, -50, 0, 50, 0],
-            y: [0, -40, -80, -40, 0],
-            scale: [1, 1.2, 1, 1.1, 1]
-          }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          className="absolute bottom-[10%] right-[10%] h-[300px] w-[300px] md:h-[500px] md:w-[500px] rounded-full bg-orange-500/15 opacity-60 blur-[100px]"
-        />
+
       </div>
       
       <Navbar />
