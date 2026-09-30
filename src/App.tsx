@@ -8,6 +8,7 @@ import Experience from './sections/Experience'
 import Skills from './sections/Skills'
 import Contact from './sections/Contact'
 import Footer from './components/Footer'
+import ChatbotWidget from './components/ChatbotWidget'
 
 function App() {
   // Ativa o dark mode por padrão baseado na preferência do sistema
@@ -40,6 +41,7 @@ function App() {
       <Skills />
       <Contact />
       <Footer />
+      <ChatbotWidget />
     </main>
   )
 }

@@ -132,7 +132,7 @@ export const experienceData: Experience[] = [
     id: "2",
     title: "Tecnólogo em Sistemas para Internet",
     company: "Instituto Federal do Triângulo Mineiro (IFTM)",
-    period: "2023 - 2025",
+    period: "Concluído em 2025",
     description: "Formação abrangente no desenvolvimento de aplicações web (front-end e back-end) e mobile. O currículo engloba arquiteturas monolíticas e de microsserviços, bancos de dados SQL e NoSQL, Programação Orientada a Objetos (POO), testes automatizados, sistemas distribuídos, segurança e inteligência computacional.",
     type: "Educação"
   }
