@@ -50,9 +50,11 @@ export default function ChatbotWidget() {
     "ele tem experiência?": "Sim, ele trabalhou como Cloud Data Engineer na Compass UOL lidando com AWS, Python e dados.",
     "como falo com ele?": "A melhor forma é enviar um e-mail para luccahs03@gmail.com ou chamá-lo no LinkedIn!",
     "fale sobre o sumasflix": "O Sumasflix é um ecossistema incrível multiplataforma (Web e Mobile) construído com React, Node e Flutter. Ele interage com a comunidade de streamers de forma gamificada, conectando à API do TMDB!",
-    "quais sao os projetos dele": "O Lucca tem três projetos de destaque: O Sumasflix (plataforma de streaming gamificada), o Foodie (App Fullstack de delivery) e o Precision (Landing Page moderna).",
+    "quais sao os projetos dele": "O Lucca tem projetos de destaque: ERP Flow (Sistema de Gestão Empresarial com Java 21, Spring Boot 3 e React), Sumasflix (plataforma de streaming gamificada), Foodie (App Fullstack de delivery com Java e Node) e Precision (Landing Page moderna).",
+    "fale sobre o erp": "O ERP Flow é um sistema completo de gestão empresarial desenvolvido como um Monólito Modular com Java 21, Spring Boot 3, PostgreSQL e React + TypeScript. Conta com isolamento multitenant estrito, travas pessimistas para controle concorrente de estoque, cálculos com BigDecimal e exportações seguras contra CSV Injection.",
+    "fale sobre o erp flow": "O ERP Flow é um sistema completo de gestão empresarial desenvolvido como um Monólito Modular com Java 21, Spring Boot 3, PostgreSQL e React + TypeScript. Conta com isolamento multitenant estrito, travas pessimistas para controle concorrente de estoque, cálculos com BigDecimal e exportações seguras contra CSV Injection.",
     "fale sobre o foodie": "O Foodie é um app de delivery de ponta a ponta (Cliente, Restaurante e Entregador). Ele usa React no Front e possui dois Backends conectados simultaneamente usando Node.js e Java Spring Boot com WebSockets!",
-    "projetos": "Ele tem projetos incríveis de arquitetura Fullstack, incluindo o Sumasflix e o Foodie, onde utilizou React, Flutter, Node e Java."
+    "projetos": "Ele tem projetos de destaque em arquitetura Fullstack, incluindo o ERP Flow (Java 21, Spring Boot 3, React), o Sumasflix e o Foodie."
   });
 
   // Função para normalizar o texto (tira acentos, pontuação e deixa minúsculo)
